@@ -1,6 +1,6 @@
 # to_do
 
-A new Flutter project.
+A new Flutter project For the Todo List.
 
 ## Getting Started
 
