@@ -16,7 +16,6 @@ class Task {
 
 class TaskProvider with ChangeNotifier {
   final List<Task> _task = [];
-
   List<Task> get task => _task;
 
   void addTask(String addTitle, String ownerID) {
@@ -29,12 +28,11 @@ class TaskProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void shareTask(String taskID, String taskEmail){
-    final taskIndex = _task.indexWhere((element) => element.id == taskID);
-    if(taskIndex == 0){
-      _task[taskIndex].sharedWith.add(taskEmail);
-    }
-    notifyListeners();
-  }
+  // Trying to access _tasks[0] when _tasks = []
+void shareTask(String taskId, String email) {
+  final task = _task.firstWhere((t) => t.id == taskId); // Throws if not found
+  task.sharedWith.add(email);
+  notifyListeners();
+}
 
 }
