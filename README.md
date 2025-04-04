@@ -1,16 +1,21 @@
-# to_do
+# OverView  
 
-A new Flutter project for the Todo List.
-
+A new Flutter project for the Todo List using the Provider for state management.
+The application allows the user to :
+    
+    Add new Tasks.
+    View the list of Tasks.
+    Real-time update using the Provider.
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Dependencies 
 
-A few resources to get you started if this is your first Flutter project:
+Make sure the following dependencies are added from pub.dev: 
+    
+    flutter pub add provider
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Usage
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add the task using the add-button placed.
+
+

@@ -15,11 +15,12 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("To DO"),
+        title: const Text("To-Do"),
+        centerTitle: true,
       ),
       body: task.isEmpty
           ? const Center(
-              child: Text("no task yet"),
+              child: Text("no task yet", style: TextStyle(fontSize: 20),),
             )
           : ListView.builder(
               itemCount: task.length,
@@ -62,6 +63,7 @@ class AskDialog extends StatelessWidget {
           onPressed: () {
             Provider.of<TaskProvider>(context, listen: false)
                 .addTask(_controller.text, 'user1');
+            Navigator.of(context).pop();    
           },
           child: const Text(
             "Add",
