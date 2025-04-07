@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do/models/task.dart';
 
+import '../models/task_provider.dart';
+
 class TaskItem extends StatelessWidget {
   final Task task;
   const TaskItem({super.key, required this.task});
